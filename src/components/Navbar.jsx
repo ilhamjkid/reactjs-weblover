@@ -6,6 +6,10 @@ const Navbar = () => {
     const navbarMenu = document.querySelector("#navbarMenu");
     navbarMenu.classList.toggle("show");
   };
+  const hideNavbar = () => {
+    const navbarMenu = document.querySelector("#navbarMenu");
+    navbarMenu.classList.remove("show");
+  };
   return (
     <div id="navbar">
       <div className="container">
@@ -19,16 +23,16 @@ const Navbar = () => {
         </div>
         <div id="navbarMenu">
           <div className="navbarNav">
-            <a href="#home" className="navbarLink">
+            <a href="#home" className="navbarLink" onClick={hideNavbar}>
               Beranda
             </a>
-            <a href="#about" className="navbarLink">
+            <a href="#about" className="navbarLink" onClick={hideNavbar}>
               Tentang
             </a>
-            <a href="#product" className="navbarLink">
+            <a href="#product" className="navbarLink" onClick={hideNavbar}>
               Produk
             </a>
-            <a href="#review" className="navbarLink">
+            <a href="#review" className="navbarLink" onClick={hideNavbar}>
               Review
             </a>
           </div>
