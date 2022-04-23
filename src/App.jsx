@@ -2,6 +2,7 @@ import React from "react";
 import About from "./components/About";
 import Home from "./components/Home";
 import Product from "./components/Product";
+import Review from "./components/Review";
 
 const App = () => {
   const scrollInto = () => {
@@ -15,6 +16,7 @@ const App = () => {
       <Home />
       <About />
       <Product />
+      <Review />
       <button type="button" className="backToTop" onClick={scrollInto}>
         <span>▲</span>
       </button>

@@ -1,0 +1,146 @@
+:root {
+  --color-cream: #ffd280;
+  --color-light: #ffffff;
+  --color-glass: linear-gradient(315deg, #ffffff33 0%, #ffffff66 100%);
+}
+
+/* Phone */
+section#review {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--color-cream);
+}
+section#review > .container {
+  width: 100%;
+  max-width: 400px;
+}
+section#review > .container .row {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+section#review > .container .col {
+  width: 100%;
+  height: auto;
+}
+section#review > .container .card {
+  width: 100%;
+  height: auto;
+  padding: 10px 20px;
+}
+section#review > .container .glass {
+  width: 100%;
+  min-height: 250px;
+  background: var(--color-glass);
+  border-radius: 15px;
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px;
+}
+section#review > .container img.imgReview {
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 15px auto;
+}
+section#review > .container h4 {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-light);
+  text-align: center;
+}
+section#review > .container h2 {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--color-light);
+  text-align: center;
+}
+section#review > .container .rate {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+section#review > .container .rate img {
+  width: 22px;
+  height: auto;
+  margin: 5px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  section#review > .container {
+    max-width: 700px;
+  }
+  section#review > .container .card {
+    width: 100%;
+    height: auto;
+    padding: 15px 30px;
+  }
+  section#review > .container .glass {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    padding: 30px;
+  }
+  section#review > .container h4 {
+    font-size: 22px;
+  }
+  section#review > .container h2 {
+    font-size: 30px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  section#review > .container {
+    max-width: 1000px;
+  }
+  section#review > .container .row,
+  section#review > .container .col {
+    padding: 0;
+  }
+  section#review > .container .col:first-child {
+    width: 20%;
+    order: 2;
+  }
+  section#review > .container .col:last-child {
+    width: 80%;
+    order: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  section#review > .container .card {
+    width: 50%;
+    height: auto;
+    padding: 20px;
+  }
+  section#review > .container .glass {
+    width: 100%;
+    margin: 0;
+  }
+  section#review > .container h4 {
+    font-size: 18px;
+  }
+  section#review > .container h2 {
+    font-size: 20px;
+  }
+}
