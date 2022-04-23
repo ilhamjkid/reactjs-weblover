@@ -1,5 +1,6 @@
 import React from "react";
 import About from "./components/About";
+import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Product from "./components/Product";
 import Review from "./components/Review";
@@ -17,6 +18,7 @@ const App = () => {
       <About />
       <Product />
       <Review />
+      <Footer />
       <button type="button" className="backToTop" onClick={scrollInto}>
         <span>▲</span>
       </button>
