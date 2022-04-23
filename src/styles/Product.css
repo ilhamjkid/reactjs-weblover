@@ -1,0 +1,141 @@
+:root {
+  --color-brown: #453f35;
+  --color-light: #ffffff;
+  --color-glass: linear-gradient(315deg, #ffffff33 0%, #ffffff66 100%);
+  --color-pink: #ff8383;
+  --color-blue: #73abff;
+  --color-gray: #8f8470;
+  --color-orange: #fc833f;
+}
+
+/* Phone */
+section#product {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--color-light);
+}
+section#product > .container {
+  width: 100%;
+  max-width: 400px;
+}
+section#product > .container .row {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+section#product > .container .col {
+  width: 100%;
+  height: auto;
+  padding: 10px 20px;
+}
+section#product > .container .col:first-child {
+  padding: 0;
+}
+section#product > .container .card {
+  padding: 15px;
+}
+section#product > .container .col:nth-child(2) .card {
+  background: var(--color-pink);
+}
+section#product > .container .col:nth-child(3) .card {
+  background: var(--color-blue);
+}
+section#product > .container .col:nth-child(4) .card {
+  background: var(--color-gray);
+}
+section#product > .container .col:nth-child(5) .card {
+  background: var(--color-orange);
+}
+section#product > .container .glass {
+  background: var(--color-glass);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px 10px;
+}
+section#product > .container h1 {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-brown);
+}
+section#product > .container h4 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-light);
+}
+section#product > .container img {
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  section#product > .container {
+    max-width: 700px;
+  }
+  section#product > .container .col {
+    padding: 15px 30px;
+  }
+  section#product > .container .col:first-child {
+    padding: 0;
+  }
+  section#product > .container .card {
+    padding: 30px;
+  }
+  section#product > .container .glass {
+    padding: 20px 30px;
+  }
+  section#product > .container h1 {
+    font-size: 45px;
+  }
+  section#product > .container h4 {
+    font-size: 30px;
+  }
+  section#product > .container img {
+    max-width: 300px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  section#product > .container {
+    max-width: 1000px;
+  }
+  section#product > .container .col {
+    width: 50%;
+    padding: 15px;
+  }
+  section#product > .container .col:first-child {
+    width: 100%;
+    padding: 0;
+  }
+  section#product > .container .card {
+    padding: 20px;
+  }
+  section#product > .container .glass {
+    padding: 20px;
+  }
+  section#product > .container h1 {
+    font-size: 50px;
+  }
+  section#product > .container h4 {
+    font-size: 25px;
+  }
+  section#product > .container img {
+    max-width: 200px;
+  }
+}
