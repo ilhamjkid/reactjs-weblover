@@ -6,9 +6,12 @@ const Navbar = () => {
     const navbarMenu = document.querySelector("#navbarMenu");
     navbarMenu.classList.toggle("show");
   };
-  const hideNavbar = () => {
+  const scrollInto = (view, element) => {
+    element.preventDefault();
     const navbarMenu = document.querySelector("#navbarMenu");
+    const sections = document.querySelectorAll("section");
     navbarMenu.classList.remove("show");
+    sections[view].scrollIntoView();
   };
   return (
     <div id="navbar">
@@ -23,16 +26,16 @@ const Navbar = () => {
         </div>
         <div id="navbarMenu">
           <div className="navbarNav">
-            <a href="#home" className="navbarLink" onClick={hideNavbar}>
+            <a href="#home" className="navbarLink" onClick={(e) => scrollInto(0, e)}>
               Beranda
             </a>
-            <a href="#about" className="navbarLink" onClick={hideNavbar}>
+            <a href="#about" className="navbarLink" onClick={(e) => scrollInto(1, e)}>
               Tentang
             </a>
-            <a href="#product" className="navbarLink" onClick={hideNavbar}>
+            <a href="#product" className="navbarLink" onClick={(e) => scrollInto(2, e)}>
               Produk
             </a>
-            <a href="#review" className="navbarLink" onClick={hideNavbar}>
+            <a href="#review" className="navbarLink" onClick={(e) => scrollInto(3, e)}>
               Review
             </a>
           </div>

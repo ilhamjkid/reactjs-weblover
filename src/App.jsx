@@ -3,17 +3,19 @@ import About from "./components/About";
 import Home from "./components/Home";
 
 const App = () => {
-  const hideNavbar = () => {
+  const scrollInto = () => {
     const navbarMenu = document.querySelector("#navbarMenu");
+    const section = document.querySelectorAll("section")[0];
     navbarMenu.classList.remove("show");
+    section.scrollIntoView();
   };
   return (
     <>
       <Home />
       <About />
-      <a href="#home" className="backToTop" onClick={hideNavbar}>
+      <button type="button" className="backToTop" onClick={scrollInto}>
         <span>▲</span>
-      </a>
+      </button>
     </>
   );
 };

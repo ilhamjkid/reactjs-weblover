@@ -19,6 +19,9 @@
   color: var(--color-light);
   background: var(--color-cream);
   border-radius: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
   position: fixed;
   bottom: 20px;
   right: 20px;
